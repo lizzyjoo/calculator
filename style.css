@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Digital7';
+    src: url('/Users/lizzyjoo/calculator/fonts/Digital7-rg1mL.ttf');
+    }
+
+.black-ops-one-regular {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #e9f5db;
+    font-family: "Black Ops One", system-ui;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;    
+}
+      
+/* Header */
+header{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#718355;
+    background-color: #97a97c;
+    width: 100vw;
+    margin: 0 auto;
+    font-size: 60px;
+    text-shadow: -1px -1px 0 #423E37, 1px -1px 0 #423E37, -1px 1px 0 #423E37, 1px 1px 0 #423E37;
+} 
+
+
+.calculator {
+    background-color: #87986a;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 60px;
+    border-color: #404f28;
+    border-width: 4px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.screen {
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    width: 420px;
+    height: 120px;
+    background-color: #bac2af;
+    border-radius: 30px;
+    margin: 25px;
+    font-size: 60px;
+    color: #3c4332;
+    padding: 0 25px;
+    border-color: #819461;
+    border-width: 10px;
+    border-style: solid;
+    
+    box-shadow: #7d905c 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    
+}
+.keypad {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 2px;
+}
+.row {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+button{
+    background-color: #cfe1b9;
+    width: 75px;
+    height: 75px;
+    border: none;
+    color: #e9f4df;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    font-family: "Black Ops One", system-ui;
+    text-shadow: -1px -1px 0 #718355, 1px -1px 0 #718355, -1px 1px 0 #718355, 1px 1px 0 #718355;
+
+    border-color: #788d54;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.1s;
+}
+
+
+/* Style for the button push effect */
+.button-push {
+    transform: translateY(2px);
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #97a97c;
+    width: 100vw;
+    margin-top: 0;
+    font-size: 24px;
+    color: #e9f5db;
+    text-shadow: -1px -1px 0 #423E37, 1px -1px 0 #423E37, -1px 1px 0 #423E37, 1px 1px 0 #423E37;
+}
+
+a {
+    text-decoration: none;
+    color: #e9f5db;
+}

@@ -85,10 +85,10 @@ function operate(firstNum, secondNum, operator) {
 
     // Round the solution to 6 significant digits
     solution = parseFloat(solution.toPrecision(6));
-
+    // Update the display with the solution
     display.textContent = solution;
     
-    // Set firstNum to the solution for continued calculations
+    // Update for next calculation
     firstNum = solution.toString();
     secondNum = null;
     operator = '';
@@ -97,31 +97,30 @@ function operate(firstNum, secondNum, operator) {
     solution = null;
 }
 
-// below are math operations available on this calculator
-
-// addition
+// math operations available on this calculator
 function add(a, b) {
     return a + b;
 }
-// subtraction
+
 function subtract(a, b) {
     return a - b;
 }
-//multiplication
+
 function multiply(a, b) {
     return a * b;
 }
-//division
+
 function divide(a, b) {
     if (b === 0) {
         return "ZERODIV.ERROR";
     }
     return a / b;
 }
-// power
+
 function power(a, b) {
     return Math.pow(a, b);
 }
+
 function squareRoot(a) {
     return Math.sqrt(a);
 }

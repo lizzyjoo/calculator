@@ -1,3 +1,4 @@
+/* Import custom font */
 @font-face {
     font-family: 'Digital7';
     src: url('/Users/lizzyjoo/calculator/fonts/Digital7-rg1mL.ttf');
@@ -63,10 +64,9 @@ header{
     border-color: #819461;
     border-width: 10px;
     border-style: solid;
-    
     box-shadow: #7d905c 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-    
 }
+
 .keypad {
     display: flex;
     flex-direction: column;
@@ -78,6 +78,8 @@ header{
     gap: 28px;
     align-items: center;
 }
+
+/* Button styling */
 button{
     background-color: #cfe1b9;
     width: 75px;
@@ -91,7 +93,6 @@ button{
     border-radius: 50%;
     font-family: "Black Ops One", system-ui;
     text-shadow: -1px -1px 0 #718355, 1px -1px 0 #718355, -1px 1px 0 #718355, 1px 1px 0 #718355;
-
     border-color: #788d54;
     border-width: 2px;
     border-style: solid;

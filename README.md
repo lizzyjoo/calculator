@@ -1,6 +1,6 @@
 # Simple Calculator
 ## Overview 
-Matcha Calculator is a simple web-based calculator application designed with a refreshing matcha-green theme. It offers basic arithmetic operations including addition, subtraction, multiplication, division, power, and square root calculations.
+Matcha Calculator is a simple web-based calculator application designed with a matcha-green theme. It offers basic arithmetic operations including addition, subtraction, multiplication, division, power, and square root calculations.
 
 ### Features
 - **Basic Arithmetic Operations**: addition, subtraction, multiplication, and division.

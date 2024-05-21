@@ -1,11 +1,13 @@
+// Variables to store calculator state
 let firstNum = null;
 let secondNum = null;
 let operator = '';
 let displayEquation = '';
 let equals = false;
 let solution = null;
-
+// Get reference to the display element
 const display = document.getElementById('screen');
+// Get reference to the keypad container
 let keys = document.querySelector('#keypad');
 
 keys.addEventListener('click', (event)=> {
@@ -25,7 +27,7 @@ keys.addEventListener('click', (event)=> {
         target.classList.remove('button-push');
     }, 50);
     
-    // update the calculator screen
+    // update the calculator screen and equation string if the equals sign and delete button have not been pressed 
     if (equals === false && value !== '⌫' && value !== '=') { // prevent multiple equal signs appending 
         display.append(value);   
     }
@@ -36,7 +38,7 @@ keys.addEventListener('click', (event)=> {
     } else if (value === '⌫') { // remove the most recently pressed character
         deleteChar();
     }
-    // possible operators 
+    // Match the operator in the current equation string
     let operatorMatch = displayEquation.match(/[+\-×÷^√]/);
 
     if (operatorMatch) {
@@ -46,7 +48,7 @@ keys.addEventListener('click', (event)=> {
         secondNum = parts[1] || '';
     }
 
-    // equals sign is clicked
+     // Check if the equals button is clicked
     if (target.id === 'equals') {
         equals = true;
         operate(firstNum, secondNum, operator);
@@ -55,23 +57,32 @@ keys.addEventListener('click', (event)=> {
     }
 })
 
+// Perform the calculation based on the operator
 function operate(firstNum, secondNum, operator) {
     firstNum = Number(firstNum);
     secondNum = Number(secondNum);
 
-    if (operator === '+') {
-        solution = add(firstNum, secondNum);
-    } else if (operator === '-') {
-        solution = subtract(firstNum, secondNum);
-    } else if (operator === '×') {
-        solution = multiply(firstNum, secondNum);
-    } else if (operator === '÷') {
-        solution = divide(firstNum, secondNum);
-    } else if (operator === '^') {
-        solution = power(firstNum, secondNum);
-    } else if (operator === '√') {
-        solution = squareRoot(firstNum);
+    switch (operator) {
+        case '+':
+            solution = add(firstNum, secondNum);
+            break;
+        case '-':
+            solution = subtract(firstNum, secondNum);
+            break;
+        case '×':
+            solution = multiply(firstNum, secondNum);
+            break;
+        case '÷':
+            solution = divide(firstNum, secondNum);
+            break;
+        case '^':
+            solution = power(firstNum, secondNum);
+            break;
+        case '√':
+            solution = squareRoot(firstNum);
+            break;
     }
+
     // Round the solution to 6 significant digits
     solution = parseFloat(solution.toPrecision(6));
 
